@@ -1,0 +1,256 @@
+/* Estilos gerais */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza o conteúdo no body */
+}
+
+/* Centralização do título */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; /* Garante que o título está centralizado */
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    margin: 20px 0; /* Espaçamento acima e abaixo da tabela */
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+thead th,
+tbody td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd; /* Borda nas células */
+}
+
+tbody tr td {
+    text-align: center;
+}
+
+/* Estilo de Botões */
+button,
+input[type="submit"] {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid white;
+    margin: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+/* Input de busca e botão */
+#busca {
+    width: 200px;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+button#buscar {
+    width: auto;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+/* Modal - Formulário */
+#modal {
+    display: none;
+    width: 500px;
+    max-height: 80%;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #007BFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+#modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Modal Header */
+.modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Modal Footer */
+.modal-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botão Fechar (X) */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover {
+    color: #007BFF;
+}
+
+/* Modal de Estilo - Ajustado */
+#modalstyle {
+    display: none;
+    width: 300px; /* Ajustando para um tamanho menor */
+    height: 200px; /* Tamanho ajustado */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza no meio da tela */
+    background-color: #111;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #007BFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#modalstyle .modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#modalstyle .modal-body {
+    font-size: 14px;
+}
+
+#modalstyle .modal-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#modalstyle .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#modalstyle .close:hover {
+    color: #007BFF;
+}
+
+/* Efeito de sombreamento para fundo */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* Fundo com sombra branca */
+}
+
+/* Layout de Inputs no Formulário */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    margin: 5px 0;
+}
+
+/* Ajuste de largura no botão de fechar na modal */
+button#fechar {
+    margin-top: 10px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+/* Estilo dos botões no Footer da modal */
+button.modal-footer-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button.modal-footer-btn:hover {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.logo img {
+    max-width: 400px; /* Ajuste o tamanho da imagem */
+    max-height: 150px; /* Ajuste o tamanho da imagem */
+    float: left;
+}
+
+page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; /* Garante que o título está centralizado */
+    padding-top: 50px;
+}
+
+
